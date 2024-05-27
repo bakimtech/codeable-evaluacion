@@ -1,0 +1,8 @@
+.tooltip {
+  height: var(--spacing-36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--muted);
+  border-radius: var(--rounded-lg);
+}
