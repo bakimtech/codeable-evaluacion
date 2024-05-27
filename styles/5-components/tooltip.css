@@ -1,8 +1,27 @@
-.tooltip {
+.tooltip-demo {
   height: var(--spacing-36);
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--muted);
   border-radius: var(--rounded-lg);
+}
+
+.tooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.tooltip.show {
+  opacity: 1;
 }
