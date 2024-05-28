@@ -1,38 +1,31 @@
-let tooltipElem;
+let tooltipElement;
 
 document.onmouseover = function (event) {
-  let target = event.target;
+  let tooltipContent = event.target.dataset.tooltip;
 
-  // si tenemos HTML de tooltip...
-  let tooltipHtml = target.dataset.tooltip;
-  if (!tooltipHtml) return;
+  if (!tooltipContent) return;
 
-  // ...crear el elemento tooltip
+  tooltipElement = document.createElement("div");
+  tooltipElement.className = "tooltip";
+  tooltipElement.innerHTML = tooltipContent;
+  document.querySelector(".tooltip-demo").append(tooltipElement);
 
-  tooltipElem = document.createElement("div");
-  tooltipElem.className = "tooltip";
-  tooltipElem.innerHTML = tooltipHtml;
-  document.body.append(tooltipElem);
+  const coords = event.target.getBoundingClientRect();
 
-  // posicionarlo arriba del elemento (top-center)
-  let coords = target.getBoundingClientRect();
-
-  let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
-  if (left < 0) left = 0; // no cruzar el borde izquierdo de la ventana
-
-  let top = coords.top - tooltipElem.offsetHeight - 5;
-  if (top < 0) {
-    // en cambio, si cruza el borde superior de la ventana, mostrarlo debajo
-    top = coords.top + target.offsetHeight + 5;
-  }
-
-  tooltipElem.style.left = left + "px";
-  tooltipElem.style.top = top + "px";
+  tooltipElement.style.left = `${
+    coords.left +
+    window.scrollX +
+    coords.width / 2 -
+    tooltipElement.offsetWidth / 2
+  }px`;
+  tooltipElement.style.top = `${
+    coords.top + window.scrollY - tooltipElement.offsetHeight - 5
+  }px`;
 };
 
 document.onmouseout = function (e) {
-  if (tooltipElem) {
-    tooltipElem.remove();
-    tooltipElem = null;
+  if (tooltipElement) {
+    tooltipElement.remove();
+    tooltipElement = null;
   }
 };

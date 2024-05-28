@@ -9,19 +9,9 @@
 
 .tooltip {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-  color: #fff;
+  background-color: var(--background);
   padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-
+  border-radius: var(--rounded-md);
+  font-size: var(--font-sm);
   z-index: 1000;
-  opacity: 0;
-  transition: opacity 0.2s;
-  pointer-events: none;
-}
-.tooltip.show {
-  opacity: 1;
 }
