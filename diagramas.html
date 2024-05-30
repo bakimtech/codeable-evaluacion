@@ -332,6 +332,26 @@ const harry = new Mago("Harry", "Gryffindor");</code></pre>
               Re-escribe el código usando la sintaxis de Clases de JavaScript
             </p>
             <pre><code>// tu código aquí
+class Persona {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+
+  presentarse() {
+    return `Hola, mi nombre es ${this.nombre}`;
+  }
+}
+
+class Mago extends Persona {
+  constructor(nombre, casa) {
+    super(nombre);
+    this.casa = casa;
+  }
+
+  invocarHechizo() {
+    return `${this.nombre} invoca un hechizo`;
+  }
+}
 
 const petunia = new Persona("Petunia");
 const harry = new Mago("Harry", "Gryffindor");</code></pre>

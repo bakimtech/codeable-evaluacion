@@ -1,3 +1,5 @@
+// Función `interactuarCadenas`
+
 function interactuarCadenas(cadena1, cadena2) {
   // Tu código aquí
   let nuevaCadena = "";
@@ -10,6 +12,8 @@ function interactuarCadenas(cadena1, cadena2) {
   }
   return nuevaCadena;
 }
+
+// Función `generarApodo`
 
 function generarApodo(nombre) {
   // Tu código aquí
@@ -27,6 +31,8 @@ function generarApodo(nombre) {
     throw new Error("Nombre muy corto");
   }
 }
+
+// Función `obtenerMarcador`
 
 function obtenerMarcador(texto) {
   // Tu código aquí
@@ -60,6 +66,8 @@ function obtenerMarcador(texto) {
 
   return numeros;
 }
+
+// Clase `Barco`
 
 class Barco {
   // Tu código aquí

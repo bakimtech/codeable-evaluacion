@@ -25,7 +25,6 @@ main {
 /* Container */
 
 .container {
-  --padding: 16px;
   padding-inline: var(--padding);
   max-width: var(--width-7xl);
   margin-inline: auto;
@@ -58,22 +57,3 @@ Pancake Layout
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-
-/* Pancake Stack - Version Flexbox */
-
-/* .pancake-stack {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.pancake-stack > :nth-child(2) {
-  flex-grow: 1;
-} */
-
-/* .centered-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */

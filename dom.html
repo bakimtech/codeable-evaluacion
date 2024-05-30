@@ -177,26 +177,28 @@
 
           <div class="form">
             <div class="form__wrapper">
-              <form action="" method="get" class="unete-form">
+              <form id="demoForm" method="get" class="demo-form">
                 <div class="form-field">
-                  <label for="first-name">Nombre*</label>
+                  <label for="name">Nombre*</label>
                   <input
                     type="text"
-                    id="first-name"
-                    name="first-name"
+                    id="name"
+                    name="name"
                     placeholder="Ramón Suarez"
                     required
                   />
+                  <div class="error" id="nameError"></div>
                 </div>
                 <div class="form-field">
-                  <label for="nick-name">Apodo*</label>
+                  <label for="nickname">Apodo*</label>
                   <input
                     type="text"
-                    id="nick-name"
-                    name="nick-name"
+                    id="nickname"
+                    name="nickname"
                     placeholder="ramonsupersuarez"
                     required
                   />
+                  <div class="error" id="nicknameError"></div>
                 </div>
                 <div class="form-field">
                   <label for="biography">Biografía</label>
@@ -205,6 +207,7 @@
                     name="biography"
                     placeholder="Mi nombre es ..."
                   ></textarea>
+                  <div class="error" id="biographyError"></div>
                 </div>
                 <div class="form-field">
                   <label for="password">Contraseña*</label>
@@ -215,11 +218,19 @@
                     placeholder="********"
                     required
                   />
+                  <div class="error" id="passwordError"></div>
                 </div>
-                <button class="button button--sm full-width">Enviar</button>
+                <button
+                  type="submit"
+                  id="submitBtn"
+                  class="button button--sm full-width"
+                >
+                  Enviar
+                </button>
               </form>
+              <script src="form.js"></script>
             </div>
-            <pre><code
+            <pre><code id="serverResponse"
                 >{
   "headers": {
     "host": "mocktarget.apigee.net",
