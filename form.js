@@ -226,9 +226,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const result = await response.json();
       const responseDiv = document.getElementById("serverResponse");
-      responseDiv.innerHTML = `<div class="success">Respuesta del servidor: ${JSON.stringify(
-        result
-      )}</div>`;
+      responseDiv.innerHTML = `${JSON.stringify(result)}`;
+      console.log(JSON.stringify(result));
     } catch (error) {
       console.error("Error:", error);
     }
