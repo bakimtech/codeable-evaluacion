@@ -221,17 +221,15 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData, null, 2),
       });
 
       const result = await response.json();
       const responseDiv = document.getElementById("serverResponse");
       responseDiv.innerHTML = `${JSON.stringify(result)}`;
-      console.log(JSON.stringify(result));
     } catch (error) {
       console.error("Error:", error);
     }
-    registrationForm;
   });
 
   loadFromLocalStorage();
