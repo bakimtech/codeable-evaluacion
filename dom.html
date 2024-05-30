@@ -173,7 +173,64 @@
             A continuación, presenta una demostración del Formulario con
             validación.
           </p>
-          <pre><code>&lt;!-- código del formulario aquí --&gt;</code></pre>
+          <pre><code>&lt;!-- código del formulario aquí --&gt;
+&lt;div class="form"&gt
+  &lt;div class="form__wrapper"&gt
+    &lt;form id="demoForm" method="get" class="demo-form"&gt
+      &lt;div class="form-field"&gt
+        &lt;label for="name"&gtNombre*&lt/label&gt
+        &lt;input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Ramón Suarez"
+          required
+        /&gt
+        &lt;div class="error" id="nameError"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-field"&gt;
+        &lt;label for="nickname"&gt;Apodo*&lt;/label&gt;
+        &lt;input
+          type="text"
+          id="nickname"
+          name="nickname"
+          placeholder="ramonsupersuarez"
+          required
+        /&gt;
+        &lt;div class="error" id="nicknameError"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-field"&gt;
+        &lt;label for="biography"&gt;Biografía&lt;/label&gt;
+        &lt;textarea&gt;
+          id="biography"
+          name="biography"
+          placeholder="Mi nombre es ..."
+        &lt;/textarea&gt;
+        &lt;div class="error" id="biographyError"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-field"&gt;
+      &lt;label for="password"&gt;Contraseña*&lt;/label&gt;
+        &lt;input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="********"
+          required
+        /&gt;
+        &lt;div class="error" id="passwordError"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button
+        type="submit"
+        id="submitBtn"
+        class="button button--sm full-width"
+      &gt;
+        Enviar
+      &lt;/button&gt;
+    &lt;/form&gt;
+    &lt;script src="form.js"&gt;&lt;/script&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
 
           <div class="form">
             <div class="form__wrapper">

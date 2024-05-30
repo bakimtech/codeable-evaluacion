@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isValid =
       biografia.value.trim().length === 0 ||
       biografia.value.trim().length >= 100;
-    biografiaError.textContent = isValid ? "" : "AMinimo 100 caracteres.";
+    biografiaError.textContent = isValid ? "" : "Minimo 100 caracteres.";
     validateField(biografia, biografiaError, isValid);
   });
 
